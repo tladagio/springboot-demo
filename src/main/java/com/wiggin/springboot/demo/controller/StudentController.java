@@ -33,4 +33,16 @@ public class StudentController {
         student.setSex("男");
         return student;
     }
+
+    @RequestMapping("getStudent")
+    public Student getStudent(int id){
+        Student student = new Student();
+        student.setId(2);
+        student.setAddress("广东");
+        student.setBirth(new Date());
+        student.setName("tom");
+        student.setDepartment("纪检部");
+        student.setSex("男");
+        return student;
+    }
 }

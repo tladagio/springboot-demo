@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 /**
  * copyright 2015-2020
  *
@@ -22,6 +24,13 @@ public class StudentController {
 
     @RequestMapping(value = "/qryById")
     public Student qry(int id){
-        return service.queryById(id);
+        Student student = new Student();
+        student.setId(1);
+        student.setAddress("广东");
+        student.setBirth(new Date());
+        student.setName("jack");
+        student.setDepartment("学习部");
+        student.setSex("男");
+        return student;
     }
 }
